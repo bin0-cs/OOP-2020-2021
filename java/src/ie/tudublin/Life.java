@@ -123,19 +123,24 @@ public class Life extends PApplet {
     }
 
     private void updateBoard() {
-        // Put code here to apply the rules!!
         for (int row = 0; row < size; row++) {
             for (int col = 0; col < size; col++) {
-
-                countNeighbours(row, col);
-                if(count<)
-
+                int count = countNeighbours(row, col);
+                if (getCell(board, row, col)) {
+                    if (count == 2 || count == 3) {
+                        next[row][col] = true;
+                    } else {
+                        next[row][col] = false;
+                    }
+                } else {
+                    if (count == 3) {
+                        next[row][col] = true;
+                    } else {
+                        next[row][col] = false;
+                    }
+                }
             }
-
-        
         }
-
-        // Swap board and next
         boolean[][] temp = board;
         board = next;
         next = temp;
