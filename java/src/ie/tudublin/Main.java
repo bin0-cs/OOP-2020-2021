@@ -55,10 +55,6 @@ public class Main {
         processing.core.PApplet.runSketch(a, new Arrays());
     }
 
-    public void life() {
-        String[] a = { "MAIN" };
-        processing.core.PApplet.runSketch(a, new Life());
-
     public void life1() {
         String[] a = { "MAIN" };
         processing.core.PApplet.runSketch(a, new Life1());
