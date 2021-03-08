@@ -75,8 +75,19 @@ public class Main {
         processing.core.PApplet.runSketch(a, new Gantt());
     }
 
+<<<<<<< HEAD
     public static void main(String[] args) {
+=======
+    public void audio1()
+    {
+        String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio1());
+    }
+
+    public static void main(String[] args)
+    {
+>>>>>>> c504cda9e46c5646ed4b258660087c13572eba84
         Main main = new Main();
-        main.gantt();
+        main.audio1();
     }
 }
