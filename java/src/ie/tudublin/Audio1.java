@@ -21,6 +21,7 @@ public class Audio1 extends PApplet {
 
     float y = 200;
     float lerpedY = y;
+    int which = 0;
 
     public void setup() {
         minim = new Minim(this);
