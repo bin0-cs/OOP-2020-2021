@@ -85,18 +85,12 @@ public class Main {
         processing.core.PApplet.runSketch(a, new Audio2());
     }
 
-<<<<<<< HEAD
-    public static void main(String[] args) {
-=======
-    public void yasc()
-    {
-        String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new YASC());
+    public void yasc() {
+        String[] a = { "MAIN" };
+        processing.core.PApplet.runSketch(a, new YASC());
     }
 
-    public static void main(String[] args)
-    {
->>>>>>> 49e5315cb8ebead5af789c521591440f64b95999
+    public static void main(String[] args) {
         Main main = new Main();
         main.yasc();
     }
