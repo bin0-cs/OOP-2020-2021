@@ -5,10 +5,14 @@ import processing.core.PApplet;
 public class Player {
 
     float x, y;
+    float dx, dy;
     float w = 50;
     float halfW = w / 2;
     YASC yasc;
     float rotation;
+
+    int health = 10;
+    int ammo = 10;
 
     public Player(YASC yasc, float x, float y) {
         this.yasc = yasc;
@@ -17,21 +21,29 @@ public class Player {
         rotation = 0;
     }
 
-    void render() {
+    void render()
         yasc.rotate(rotation);
         // Write this!!
-        yasc.line(x - halfW, y + halfW, x, y - halfW);
-        yasc.line(x, y - halfW, x + halfW, y + halfW);
-        yasc.line(x + halfW, y + halfW, x, y);
-        yasc.line(x, y, x - halfW, y + halfW);
+        yasc.line(- halfW, halfW, 0, - halfW);
+        yasc.line(halfW, halfW, 0, 0);
+        yasc.line(0, 0, - halfW, halfW);
+        yasc.popMatrix();
+        yasc.textSize(14);
+        yasc.text("Health: " + health, x + 50, y - 10);
+        yasc.text("Ammo: " + ammo, x + 50, y + 10);
     }
 
     void update() {
+        dx = PApplet.sin(rotation);
+        dy = -PApplet.cos(rotation);
+
         if (yasc.checkKey(PApplet.UP)) {
-            y -= 1;
+            x += dx;
+            y += dy;
         }
         if (yasc.checkKey(PApplet.DOWN)) {
-            y += 1;
+            x -= dx;
+            y -= dy;
         }
         if (yasc.checkKey(PApplet.LEFT)) {
             rotation -= 0.1f;
