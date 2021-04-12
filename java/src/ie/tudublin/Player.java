@@ -22,6 +22,8 @@ public class Player {
     }
 
     void render()
+    yasc.pushMatrix()
+    yasc.translate(x, y);
         yasc.rotate(rotation);
         // Write this!!
         yasc.line(- halfW, halfW, 0, - halfW);
