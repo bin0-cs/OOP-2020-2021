@@ -7,16 +7,14 @@ public class Star {
     private boolean hab;
     private String displayName;
     private float distance;
-    private float xG,yG,zG;
+    private float xG, yG, zG;
     private float absMag;
 
-    public Star()
-    {
-        
+    public Star() {
+
     }
 
-    public void render(PApplet pa)
-    {
+    public void render(PApplet pa) {
         float border = pa.width * 0.1f;
         float x = PApplet.map(xG, -5, 5, border, pa.width - border);
         float y = PApplet.map(yG, -5, 5, border, pa.width - border);
@@ -31,22 +29,13 @@ public class Star {
         pa.text(displayName, x + 10, y);
     }
 
-    public Star(TableRow row)
-    {
+    public Star(TableRow row) {
         // Constructor chaining
-        this(
-            row.getInt("Hab?") == 1 ? true : false,
-            row.getString("Display Name"),
-            row.getFloat("Distance"),
-            row.getFloat("Xg"),
-            row.getFloat("Yg"),
-            row.getFloat("Zg"),
-            row.getFloat("AbsMag")
-        );
+        this(row.getInt("Hab?") == 1 ? true : false, row.getString("Display Name"), row.getFloat("Distance"),
+                row.getFloat("Xg"), row.getFloat("Yg"), row.getFloat("Zg"), row.getFloat("AbsMag"));
     }
 
-    public Star(boolean hab, String displayName, float distance, float xG, float yG, float zG, float absMag)
-    {
+    public Star(boolean hab, String displayName, float distance, float xG, float yG, float zG, float absMag) {
         this.hab = hab;
         this.displayName = displayName;
         this.distance = distance;
@@ -55,7 +44,7 @@ public class Star {
         this.zG = zG;
         this.absMag = absMag;
     }
-    
+
     public boolean isHab() {
         return hab;
     }

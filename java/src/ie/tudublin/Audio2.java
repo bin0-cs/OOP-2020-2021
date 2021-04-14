@@ -56,14 +56,12 @@ public class Audio2 extends PApplet {
 
         int closestIndex = 0;
         float smalestGap = Float.MAX_VALUE;
-        for(int i = 0 ; i < frequencies.length ; i ++)
-        {
+        for (int i = 0; i < frequencies.length; i++) {
             float gap = abs(freq - frequencies[i]);
-            if (gap < smalestGap)
-            {
+            if (gap < smalestGap) {
                 smalestGap = gap;
                 closestIndex = i;
-            }            
+            }
         }
         return spellings[closestIndex];
     }
@@ -76,13 +74,8 @@ public class Audio2 extends PApplet {
         colorMode(HSB);
 
         minim = new Minim(this);
-<<<<<<< HEAD
-        ap = minim.loadFile("scale.wav", width);
-        ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
-=======
         ap = minim.loadFile("heroplanet.mp3", width);
-        ai = minim.getLineIn(Minim.MONO, width, 44100, 16); 
->>>>>>> dd3e25b42f09cc7186463d33223d35f47935b678
+        ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         ab = ap.mix;
 
         fft = new FFT(width, 44100);

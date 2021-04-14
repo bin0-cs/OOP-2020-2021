@@ -16,14 +16,9 @@ public class Audio1 extends PApplet {
     float[] lerpedBuffer;
 
     public void settings() {
-<<<<<<< HEAD
-        // size(512, 512, P3D);
+        // size(1000, 1000, P3D);
         fullScreen(P3D, SPAN); // Try this for full screen multiple monitor support :-) Be careful of
                                // exceptions!
-=======
-        //size(1000, 1000, P3D);
-        fullScreen(P3D, SPAN); // Try this for full screen multiple monitor support :-) Be careful of exceptions!
->>>>>>> dd3e25b42f09cc7186463d33223d35f47935b678
     }
 
     float y = 200;
@@ -42,8 +37,8 @@ public class Audio1 extends PApplet {
 
     }
 
-<<<<<<< HEAD
-=======
+    <<<<<<<HEAD=======
+
     public void keyPressed() {
         if (keyCode >= '0' && keyCode <= '6') {
             which = keyCode - '0';
@@ -56,13 +51,13 @@ public class Audio1 extends PApplet {
                 ap.play();
             }
         }
-        if (keyCode == UP)
-        {
-            twoCubes = ! twoCubes;
+        if (keyCode == UP) {
+            twoCubes = !twoCubes;
         }
     }
 
->>>>>>> dd3e25b42f09cc7186463d33223d35f47935b678
+    >>>>>>>dd3e25b42f09cc7186463d33223d35f47935b678
+
     float lerpedAverage = 0;
     private float angle = 0;
 
@@ -206,7 +201,5 @@ public class Audio1 extends PApplet {
                     popMatrix();
                 }
             }
-        }        
->>>>>>> dd3e25b42f09cc7186463d33223d35f47935b678
-    }
-}
+        }>>>>>>>dd3e25b42f09cc7186463d33223d35f47935b678
+}}
