@@ -32,8 +32,13 @@ public class Player extends GameObject {
             float dist = 30;
 
             Bullet b = new Bullet(yasc, x + (dx * dist), y + (dy * dist), rotation);
+<<<<<<< HEAD
 
             yasc.bullets.add(b);
+=======
+            
+            yasc.gameObjects.add(b);
+>>>>>>> f3d5879a542b442bee26d0a97747c21e4b055c4c
         }
     }
 
